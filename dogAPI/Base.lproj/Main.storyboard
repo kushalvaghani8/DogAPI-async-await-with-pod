@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +70,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vko-d9-hzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1137.68115942029" y="92.410714285714278"/>
+        </scene>
+        <!--Dog View Controller-->
+        <scene sceneID="aqp-zc-gCh">
+            <objects>
+                <viewController storyboardIdentifier="DogViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gPT-fT-rQB" customClass="DogViewController" customModule="dogAPI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cwM-uj-6nP">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="J8D-ts-zLY">
+                                <rect key="frame" x="20" y="145" width="374" height="310"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftg-FH-qUQ">
+                                <rect key="frame" x="20" y="85" width="374" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5fV-9G-Ft5">
+                                <rect key="frame" x="20" y="534" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="New Image"/>
+                                <connections>
+                                    <action selector="randomImage:" destination="gPT-fT-rQB" eventType="touchUpInside" id="1Ks-0q-vZf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MCs-aX-CAY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="MCs-aX-CAY" firstAttribute="trailing" secondItem="ftg-FH-qUQ" secondAttribute="trailing" constant="20" id="8Xc-FO-inQ"/>
+                            <constraint firstItem="ftg-FH-qUQ" firstAttribute="leading" secondItem="MCs-aX-CAY" secondAttribute="leading" constant="20" id="DuI-Yc-qnT"/>
+                            <constraint firstItem="ftg-FH-qUQ" firstAttribute="top" secondItem="MCs-aX-CAY" secondAttribute="top" constant="41" id="GnC-N6-rdt"/>
+                            <constraint firstItem="J8D-ts-zLY" firstAttribute="leading" secondItem="MCs-aX-CAY" secondAttribute="leading" constant="20" id="VoN-9t-ano"/>
+                            <constraint firstItem="5fV-9G-Ft5" firstAttribute="top" secondItem="J8D-ts-zLY" secondAttribute="bottom" constant="79" id="ftb-CL-op0"/>
+                            <constraint firstItem="J8D-ts-zLY" firstAttribute="top" secondItem="MCs-aX-CAY" secondAttribute="top" constant="101" id="hS7-EY-Vv5"/>
+                            <constraint firstItem="J8D-ts-zLY" firstAttribute="centerX" secondItem="cwM-uj-6nP" secondAttribute="centerX" id="kk7-N3-nfU"/>
+                            <constraint firstItem="5fV-9G-Ft5" firstAttribute="centerX" secondItem="cwM-uj-6nP" secondAttribute="centerX" id="nr3-gL-zNd"/>
+                            <constraint firstItem="MCs-aX-CAY" firstAttribute="trailing" secondItem="J8D-ts-zLY" secondAttribute="trailing" constant="20" id="pbF-Mo-pjM"/>
+                            <constraint firstItem="MCs-aX-CAY" firstAttribute="bottom" secondItem="5fV-9G-Ft5" secondAttribute="bottom" constant="297" id="qnd-He-TjN"/>
+                            <constraint firstItem="5fV-9G-Ft5" firstAttribute="leading" secondItem="MCs-aX-CAY" secondAttribute="leading" constant="20" id="sNH-1e-2A3"/>
+                            <constraint firstItem="MCs-aX-CAY" firstAttribute="trailing" secondItem="5fV-9G-Ft5" secondAttribute="trailing" constant="20" id="zdu-a0-Vrn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="breedNameLabel" destination="ftg-FH-qUQ" id="3OZ-hu-QE9"/>
+                        <outlet property="dogImage" destination="J8D-ts-zLY" id="zbK-1H-aSR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x2S-gs-Q83" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="92"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xyd-92-O7R">

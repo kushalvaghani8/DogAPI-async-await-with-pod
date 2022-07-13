@@ -10,13 +10,13 @@
 		7D1C93B42F4F6AA7177FE017 /* Pods_dogAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88863B315CF59D5857685645 /* Pods_dogAPI.framework */; };
 		DB60AF762873A317008F19EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60AF752873A317008F19EE /* AppDelegate.swift */; };
 		DB60AF782873A317008F19EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60AF772873A317008F19EE /* SceneDelegate.swift */; };
-		DB60AF7A2873A317008F19EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60AF792873A317008F19EE /* ViewController.swift */; };
 		DB60AF7D2873A317008F19EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB60AF7B2873A317008F19EE /* Main.storyboard */; };
 		DB60AF7F2873A318008F19EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB60AF7E2873A318008F19EE /* Assets.xcassets */; };
 		DB60AF822873A318008F19EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB60AF802873A318008F19EE /* LaunchScreen.storyboard */; };
 		DB60AF8A2873A358008F19EE /* DogAPI_Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60AF892873A358008F19EE /* DogAPI_Helper.swift */; };
 		DB60AF8C2873A817008F19EE /* BreedsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60AF8B2873A817008F19EE /* BreedsTableViewController.swift */; };
 		DB60AF8E2873B06C008F19EE /* SubbreedTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB60AF8D2873B06C008F19EE /* SubbreedTableViewCell.swift */; };
+		F0C9B80A287E9B0D00EE9289 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0C9B809287E9B0D00EE9289 /* DogViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +26,6 @@
 		DB60AF722873A317008F19EE /* dogAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dogAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB60AF752873A317008F19EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB60AF772873A317008F19EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DB60AF792873A317008F19EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DB60AF7C2873A317008F19EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DB60AF7E2873A318008F19EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB60AF812873A318008F19EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -34,6 +33,7 @@
 		DB60AF892873A358008F19EE /* DogAPI_Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI_Helper.swift; sourceTree = "<group>"; };
 		DB60AF8B2873A817008F19EE /* BreedsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewController.swift; sourceTree = "<group>"; };
 		DB60AF8D2873B06C008F19EE /* SubbreedTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubbreedTableViewCell.swift; sourceTree = "<group>"; };
+		F0C9B809287E9B0D00EE9289 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +54,6 @@
 				AC60989327B2F88ABB6C701D /* Pods-dogAPI.debug.xcconfig */,
 				BCB9BF5B565C3E04F0E10906 /* Pods-dogAPI.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -89,11 +88,11 @@
 			children = (
 				DB60AF752873A317008F19EE /* AppDelegate.swift */,
 				DB60AF772873A317008F19EE /* SceneDelegate.swift */,
-				DB60AF792873A317008F19EE /* ViewController.swift */,
 				DB60AF892873A358008F19EE /* DogAPI_Helper.swift */,
 				DB60AF8B2873A817008F19EE /* BreedsTableViewController.swift */,
 				DB60AF8D2873B06C008F19EE /* SubbreedTableViewCell.swift */,
 				DB60AF7B2873A317008F19EE /* Main.storyboard */,
+				F0C9B809287E9B0D00EE9289 /* DogViewController.swift */,
 				DB60AF7E2873A318008F19EE /* Assets.xcassets */,
 				DB60AF802873A318008F19EE /* LaunchScreen.storyboard */,
 				DB60AF832873A318008F19EE /* Info.plist */,
@@ -216,12 +215,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB60AF7A2873A317008F19EE /* ViewController.swift in Sources */,
 				DB60AF8E2873B06C008F19EE /* SubbreedTableViewCell.swift in Sources */,
 				DB60AF8A2873A358008F19EE /* DogAPI_Helper.swift in Sources */,
 				DB60AF8C2873A817008F19EE /* BreedsTableViewController.swift in Sources */,
 				DB60AF762873A317008F19EE /* AppDelegate.swift in Sources */,
 				DB60AF782873A317008F19EE /* SceneDelegate.swift in Sources */,
+				F0C9B80A287E9B0D00EE9289 /* DogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
