@@ -6,11 +6,13 @@
 //
 
 import UIKit
+import SDWebImage
 
 class BreedsTableViewController: UITableViewController {
 
     var breeds: [String:[String]] = [:]
     var keys = [String]()
+    var imgList = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,13 @@ class BreedsTableViewController: UITableViewController {
             do{
                 self.breeds = try await DogAPI_Helper.fetchBreeds()
                 self.keys = breeds.keys.sorted(by: <)
+                
+                for _ in 0...self.breeds.count - 1 //getting all the images when view loads
+                {
+                   let img =  try await DogApi_ImageHelper.fetchBreeds()
+                  //  print(img)
+                    self.imgList.append(img) //appending all the images to imglist
+                }
 //                let breedKeys = breeds.keys.sorted(by: <)
                                 
 //                for breed in breedKeys{
@@ -78,6 +87,7 @@ class BreedsTableViewController: UITableViewController {
             && indexPath.row != 0{
             cell.breedName.text = "\(breed):"
             cell.subBreedName.text = breeds[breed]![indexPath.row-1]
+            cell.imgView.sd_setImage(with: URL(string: self.imgList[indexPath.row]), placeholderImage: UIImage()) //for image thumbnails
         } else {
             cell.breedName.text = breed
             cell.subBreedName.alpha = 0
@@ -96,6 +106,7 @@ class BreedsTableViewController: UITableViewController {
         
         return cell
     }
+    
 
     /*
     // Override to support conditional editing of the table view.

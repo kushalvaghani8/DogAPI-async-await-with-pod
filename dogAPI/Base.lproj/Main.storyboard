@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IUE-qj-o2Y">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="NgH-Ut-8vp">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -35,16 +35,26 @@
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <color key="highlightedColor" systemColor="labelColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zu9-NB-Aer">
+                                            <rect key="frame" x="364" y="1.5" width="40" height="40.5"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="MPv-dw-dQA"/>
+                                                <constraint firstAttribute="height" constant="40.5" id="Mu6-3v-EIe"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="zu9-NB-Aer" firstAttribute="centerY" secondItem="9sB-RI-Ryt" secondAttribute="centerY" id="FcZ-aD-JSX"/>
                                         <constraint firstItem="KoF-w2-3jk" firstAttribute="leading" secondItem="9sB-RI-Ryt" secondAttribute="leadingMargin" id="f8y-Q9-BRv"/>
                                         <constraint firstItem="MUO-wC-w9v" firstAttribute="leading" secondItem="KoF-w2-3jk" secondAttribute="trailing" constant="8" id="h7f-PS-isD"/>
                                         <constraint firstItem="MUO-wC-w9v" firstAttribute="centerY" secondItem="9sB-RI-Ryt" secondAttribute="centerY" id="m1y-fe-zIf"/>
                                         <constraint firstItem="KoF-w2-3jk" firstAttribute="centerY" secondItem="9sB-RI-Ryt" secondAttribute="centerY" id="mkE-wP-naa"/>
+                                        <constraint firstAttribute="trailing" secondItem="zu9-NB-Aer" secondAttribute="trailing" constant="10" id="r26-gP-Q9P"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="breedName" destination="KoF-w2-3jk" id="MgZ-VI-XMr"/>
+                                    <outlet property="imgView" destination="zu9-NB-Aer" id="3Hv-au-Wuc"/>
                                     <outlet property="subBreedName" destination="MUO-wC-w9v" id="kaE-bO-Npu"/>
                                 </connections>
                             </tableViewCell>
@@ -54,10 +64,29 @@
                             <outlet property="delegate" destination="IUE-qj-o2Y" id="Hfz-hk-mnD"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="m5m-u7-HbO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vko-d9-hzw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="228" y="93"/>
+            <point key="canvasLocation" x="1137.68115942029" y="92.410714285714278"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xyd-92-O7R">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NgH-Ut-8vp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6kT-NE-gib">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IUE-qj-o2Y" kind="relationship" relationship="rootViewController" id="hc0-YK-kWG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hZx-33-2Ca" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448" y="92"/>
         </scene>
     </scenes>
     <resources>
