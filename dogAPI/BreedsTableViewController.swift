@@ -23,6 +23,12 @@ class BreedsTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
+        let activityIndicator = UIActivityIndicatorView() //adding activity indicator for everything to load
+                activityIndicator.frame = tableView.bounds
+        activityIndicator.frame = CGRect.init(x: tableView.center.x, y: tableView.center.y-100, width: 20, height: 20)
+                tableView.addSubview(activityIndicator)
+                activityIndicator.startAnimating()
+        
         Task{
             do{
                 self.breeds = try await DogAPI_Helper.fetchBreeds()
@@ -53,7 +59,9 @@ class BreedsTableViewController: UITableViewController {
                 
                 
                 DispatchQueue.main.async {
+                    
                     self.tableView.reloadData()
+                    activityIndicator.stopAnimating()
                 }
             } catch let err{
                 print("something went wrong: \(err)")
