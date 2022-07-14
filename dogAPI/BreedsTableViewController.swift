@@ -95,11 +95,13 @@ class BreedsTableViewController: UITableViewController {
             && indexPath.row != 0{
             cell.breedName.text = "\(breed):"
             cell.subBreedName.text = breeds[breed]![indexPath.row-1]
-            cell.imgView.sd_setImage(with: URL(string: self.imgList[indexPath.row]), placeholderImage: UIImage()) //for image thumbnails
+             //for image thumbnails
         } else {
             cell.breedName.text = breed
             cell.subBreedName.alpha = 0
         }
+        
+        cell.imgView.sd_setImage(with: URL(string: self.imgList[indexPath.section]), placeholderImage: UIImage())
         
         
 //        if let breed = breeds[keys[indexPath.row]]{
